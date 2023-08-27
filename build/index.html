@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>The Ramayana</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/resources/css/rmy-index.css" rel="stylesheet">
+</head>
+
+<body>
+    <img src="/resources/images/aasi.png" width="192px" class="aasi-logo">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>The Ramayana of Valmiki</h1>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8">
+                <p>
+                    The Ramayana is an ancient Sanskrit epic, and the older of the two Great Epics of India. It is
+                    probably the most influential Indian text, having local versions in almost all Indian languages, as
+                    well as
+                    being the national epic of <a href="https://en.wikipedia.org/wiki/Ramakien">Thailand</a>, <a
+                        href="https://en.wikipedia.org/wiki/Phra_Lak_Phra_Ram">Laos</a>, and being an important source
+                    of cultural influence in countries
+                    like Indonesia.
+                    <br>
+                    <br>
+                    This website hosts the English translation of the Ramayana along with the Sanskrit version. The
+                    English
+                    translation was done by <a href="https://en.wikipedia.org/wiki/Ralph_T._H._Griffith">Ralph Thomas
+                        Hotchkin Griffith,</a> and was digitized by <a href="https://www.gutenberg.com">Project
+                        Gutenberg</a>. My work has been
+                    turning Gutenberg's plaintext into beautiful HTML and adding a search indexer to the epic.
+                    <br>
+                    <br>
+                    Billions have grown up with the Ramayana, and I felt it must be accesible in a modern digital
+                    format. Most Indians grew up watching <em><a
+                            href="https://en.wikipedia.org/wiki/Ramayan_(1987_TV_series)">Ramanand's Sagar Ramayan
+                            (1987)</a></em> which aired on
+                    Indian state TV and remains the most view mythological serial with over 650 million viewers.
+                    Arguably the highest point of the serial was the famous 'हम कथा सुनाते राम सकल गुणधाम की' (We Tell
+                    The Tale of the Virtuous Rama) song, which has been translated to English prose on <a
+                        href="https://www.youtube.com/watch?v=mt5PhnLN1bQ">YouTube</a>.
+                    <br>
+                    <br>
+                    There are of course, many versions of the Ramayana as shown above here, but we have decided like
+                    many others, to stick to the Valmiki version as it is
+                    considered "canon".
+                    <br>
+                    <br>
+                    Regards,<br>
+                    S.Gautam.
+                </p>
+            </div>
+
+            <div class="col-4">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h5 class="card-title">The Ramayana Across Asia</h5>
+                    </div>
+
+                    <div class="card-body" style="text-align:center;">
+                        <a href="/resources/images/rmy-extent.png" >
+                        <img src="/resources/images/rmy-extent.png" class="img-fluid">
+                        </a>
+                    </div>
+
+                    <div class="card-footer" style="text-align:center;">
+                        <em>The Extent of The Ramayana.</em> Click to enlarge.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2>The Books</h2>
+            <hr>
+            <div class="row" style="text-align:center" id="book-catalog">
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/resources/js/BookCatalog.js"></script>
+    <script>
+        $(document).ready(() => {
+            GenerateBooksCatalog("#book-catalog");
+        });
+    </script>
+</body>
+
+</html>

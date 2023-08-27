@@ -1,0 +1,25 @@
+@import url('/resources/css/verse-common.css');
+
+@font-face {
+  font-family: Eczar;
+  src: url("/resources/Eczar-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Eczar;
+  font-weight: bold;
+  src: url("/resources/Eczar-Bold.ttf") format("truetype");
+}
+
+.rmy-skt-verse-index {
+  color: gray;
+}
+
+.rmy-skt-verse {
+  font-family: Eczar;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+
+

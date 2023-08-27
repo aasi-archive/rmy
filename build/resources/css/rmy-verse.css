@@ -1,0 +1,81 @@
+@import url('/resources/css/verse-common.css');
+
+@font-face {
+  font-family: Andada;
+  src: url("/resources/Andada.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Andada;
+  font-weight: bold;
+  src: url("/resources/Andada-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Andada;
+  font-style: italic;
+  src: url("/resources/Andada-Italic.otf") format("opentype");
+}
+
+.rmy-content 
+{
+  font-family: 'Andada', serif;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .rmy-content {
+    font-size: 0.8em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .rmy-content {
+    font-size: 0.3em;
+    margin-left: 0%;
+  }
+}
+
+.footnote-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.footnote-tooltip .footnote-tooltip-text {
+  visibility: hidden;
+  width: 400px;
+  background-color: #ffffca;
+  color: #000;
+  text-align: center;
+  font-family: 'Segoe UI';
+  font-size: 0.5em;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  transform: translate(-50%);
+  filter: drop-shadow(0px 0px 5px #aaa)
+}
+
+.footnote-tooltip .footnote-tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #ffffca transparent transparent transparent;
+}
+
+.footnote-tooltip:hover .footnote-tooltip-text {
+  visibility: visible;
+  opacity: 0.95;
+}

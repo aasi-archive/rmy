@@ -1,0 +1,39 @@
+body
+{
+    padding-top: 3%;
+    background-color: rgb(255, 240, 240);
+    font-size: 1.25em;
+}
+
+.card-title
+{
+    text-align: center;
+}
+
+.card 
+{
+    transition: transform 0.1s ease;
+}
+
+.card:hover 
+{
+    transform: scale(1.1);
+}
+
+.small-text 
+{
+    font-size: 0.6em;
+    font-family: 'Verdana';
+}
+
+.aasi-logo {
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.book-thumbnail
+{
+    border-radius: 2%;
+}
