@@ -1,0 +1,59 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Ramayana Corpus Search</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/resources/css/rmy-search.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container rmy-search">
+        <div class="row rmy-search-header">
+            <h1>THE RAMAYANA</h1>
+            <p>Search the English Corpus</p>
+        </div>
+        <div class="row py-1">
+            <div class="col-10">
+                <label for="rmy-search" class="form-label"></label>
+                <input type="text" id="rmy-search" name="rmy-search" class="form-control"
+                    placeholder="Enter a phrase or regular expression to query...">
+            </div>
+            <div class="col-1 pt-2">
+                <button class="btn btn-lg w-100 btn-danger" id="search-button" onClick="rmy_search('#search-results', '#rmy-search')"><span class="fa fa-search"></span></button>
+            </div>
+            <div class="col-1 pt-2">
+                <a href="/" class="btn btn-lg w-100 btn-danger" id="search-button"><span class="fa fa-home"></span></a>
+            </div>
+        </div>
+
+        <div class="px-2" id="search-results">
+
+        </div>
+    </div>
+
+    <div class="image-credits">
+        "The Return of Rama to Ayodhya", by Ram Das
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/resources/js/search.js"></script>
+    <script>
+        $(document).ready(() => {
+            var input = document.getElementById("rmy-search");
+            input.addEventListener("keypress", (event) => {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    document.getElementById("search-button").click();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
