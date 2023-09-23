@@ -72,6 +72,8 @@ def rmy_render_book(book_no, canto_array, footnotes):
         content = canto["content"]
         title = canto["title"]
 
+        # Replace '[GPT]' as <sup>GPT</sup>
+        title = title.replace('[GPT]', '<span class="footnote-tooltip text-danger"><sup class="fs-6">GPT</sup><span class="footnote-tooltip-text">Not part of the original Griffith text. Generated from prose using GPT3.5.</span></span>')
         title = re.sub(r'\((\d+)\)', lambda match: f'<span class="footnote-tooltip text-danger"><sup><i class="fa fa-info-circle"></i></sup><span class="footnote-tooltip-text">{footnotes[int(match.group(1))-1]}</span></span>', title)
         content = content.replace('\n', '<br>')
         content = re.sub(r'\((\d+)\)', lambda match: f'<span class="footnote-tooltip text-danger"><sup><i class="fa fa-info-circle"></i></sup><span class="footnote-tooltip-text">{footnotes[int(match.group(1))-1]}</span></span>', content)
